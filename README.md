@@ -61,6 +61,19 @@ The website is served over HTTPS. HTTP requests redirect to HTTPS.
 - HTTP redirected with `301 Moved Permanently`.
 - Certbot renewal dry run succeeded.
 
+## Project Screenshots
+
+### Aura-Spa Website
+
+![Aura-Spa website](screenshots/aura-spa-website.png)
+
+### HTTP-to-HTTPS Redirect
+
+![HTTP redirect verification](screenshots/https-redirect.png)
+
+### Service Health Check
+
+![Health-check results](screenshots/health-check.png)
 
 ## Technologies Used
 
