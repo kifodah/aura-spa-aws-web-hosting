@@ -39,6 +39,29 @@ flowchart TD
 
 BIND9 and Postfix are configured for local testing. They are not exposed as public DNS or public email services.
 
+## Project Documentation
+
+- [Infrastructure Architecture](docs/architecture.md) — components, request flow, and security boundaries.
+- [Deployment Guide](docs/deployment-guide.md) — setup steps and verification commands.
+- [Troubleshooting Guide](docs/troubleshooting.md) — diagnostic commands and common service issues.
+- [Health-Check Script](scripts/health-check.sh) — checks Apache, BIND9, Postfix, and HTTPS availability.
+
+## Live Demo
+
+**Website:** https://aura-spa.duckdns.org
+
+The website is served over HTTPS. HTTP requests redirect to HTTPS.
+
+## Validation Highlights
+
+- Apache service verified as active.
+- BIND9 local test-zone lookups verified.
+- Postfix local mail delivery verified.
+- HTTPS endpoint returned `200 OK`.
+- HTTP redirected with `301 Moved Permanently`.
+- Certbot renewal dry run succeeded.
+
+
 ## Technologies Used
 
 - Amazon Web Services (AWS EC2)
