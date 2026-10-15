@@ -1,0 +1,24 @@
+
+---
+- name: Manage Aura-Spa web server
+  hosts: web
+  become: true
+
+  tasks:
+    - name: Ensure Apache is installed
+      ansible.builtin.apt:
+        name: apache2
+        state: present
+
+    - name: Ensure Apache is enabled and running
+      ansible.builtin.service:
+        name: apache2
+        state: started
+        enabled: true
+
+    - name: Verify the Aura-Spa HTTPS website
+      ansible.builtin.uri:
+        url: https://aura-spa.duckdns.org
+        method: GET
+        status_code: 200
+        return_content: false
